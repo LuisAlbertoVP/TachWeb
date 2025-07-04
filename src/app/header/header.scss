@@ -1,0 +1,84 @@
+/* === HEADER === */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1030; /* Para que quede encima de otros elementos */
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Marca */
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+.navbar-brand:hover {
+  color: #f4c430;
+  text-decoration: none;
+}
+
+/* Links Navbar */
+.nav-link {
+  color: white !important;
+  transition: color 0.3s;
+}
+.nav-link:hover {
+  color: #f4c430 !important;
+}
+
+/* Íconos sociales */
+.social-icons a {
+  color: white;
+  margin-left: 12px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: #f4c430;
+}
+
+/* Dropdown menu base */
+.dropdown-menu {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  min-width: 200px;
+  padding: 0.5rem 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+.dropdown-item:hover {
+  background-color: #f4c430;
+  color: black;
+}
+
+/* Hover para dropdown en desktop */
+@media (min-width: 992px) {
+  .nav-item.dropdown.marcas-hover {
+    position: relative;
+  }
+  .dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    display: block;  /* Mantiene tamaño sin salto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  .nav-item.dropdown.marcas-hover:hover > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}

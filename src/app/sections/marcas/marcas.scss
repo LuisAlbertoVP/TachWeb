@@ -1,0 +1,200 @@
+/* Intro Section */
+.intro-section {
+  padding: 1.5rem 1rem;
+}
+
+.intro-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 0.5rem;
+}
+
+.intro-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  height: 400px;
+}
+
+/* Imagen del carousel */
+.carousel-item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* WhatsApp sección igual altura */
+.whatsapp-section {
+  background-color: #f8f9fa;
+  height: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-btn {
+  font-size: 1.1rem;
+  background-color: #25d366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+}
+
+.productos-destacados {
+  /* Título y sección */
+  .section-header {
+    max-width: 700px;
+    margin: 0 auto 3.5rem auto;
+    padding-bottom: 1rem;
+    position: relative;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 6px;
+      background: linear-gradient(90deg, rgba(244, 196, 48, 0.6), rgba(255, 235, 59, 0.6));
+      border-radius: 12px;
+      box-shadow: 0 0 8px rgba(244, 196, 48, 0.4);
+      animation: pulseBar 2.5s infinite ease-in-out;
+    }
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1e1e1e;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .section-subtitle {
+    font-size: 1.4rem;
+    color: #777;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* Cards */
+  .card {
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #f9f9fc);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+      & .card-img-top {
+        transform: scale(1.1);
+      }
+
+      &::before {
+        content: none;
+      }
+    }
+
+    .card-img-top {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      height: 200px;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #1e1e1e;
+      margin-bottom: 0.75rem;
+      letter-spacing: 1px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: #f4c430;
+        border-radius: 3px;
+      }
+    }
+
+    .card-text {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.5;
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card {
+      .card-img-top {
+        height: 140px;
+      }
+    }
+  }
+}
+
+/* Animación para la barra decorativa del título */
+@keyframes pulseBar {
+  0%, 100% {
+    box-shadow: 0 0 15px #f4c430;
+  }
+  50% {
+    box-shadow: 0 0 30px #ffeb3b;
+  }
+}

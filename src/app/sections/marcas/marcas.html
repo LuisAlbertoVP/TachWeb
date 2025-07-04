@@ -1,0 +1,87 @@
+<div class="container">
+    <section class="intro-section text-center my-4">
+        <h1 class="intro-title">Repuestos para Transmisiones {{marca}}</h1>
+        <p class="intro-description">
+            Encuentra repuestos originales y compatibles para las transmisiones automáticas de tu vehículo {{marca}}. Calidad garantizada, atención inmediata.
+        </p>
+    </section>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div id="carouselMarca" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselMarca" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselMarca" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselMarca" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    @for (srcMarca of srcMarcas; track $index) {
+                        <div class="carousel-item" [class.active]="$index == 0">
+                            <img [src]="srcMarca" class="d-block w-100" alt="Vehículo #{{$index}}">
+                        </div>
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselMarca" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselMarca" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <section class="whatsapp-section">
+                <div class="container text-center">
+                    <h2 class="section-title">¿Necesitas ayuda con repuestos {{marca}}?</h2>
+                    <a href="https://wa.me/16467502306?text={{mensaje}}" 
+                        target="_blank" 
+                        class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Chatea con nosotros en WhatsApp
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="productos-destacados container my-5">
+         <header class="section-header text-center mb-5">
+            <h2 class="section-title">Tipos de Transmisiones Automáticas</h2>
+            <p class="section-subtitle">Conoce las diferentes tecnologías que mueven tu {{marca}}</p>
+            <div class="section-underline mx-auto"></div>
+        </header>
+        <div class="row g-4">
+            <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="marcas/transauto.jpg" class="card-img-top" alt="Transmisión Automática Convencional">
+                <div class="card-body">
+                <h5 class="card-title">Transmisión Automática Convencional</h5>
+                <p class="card-text">Sistema con convertidor de par que ofrece cambios suaves y confiables.</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="marcas/transembrag.jpeg" class="card-img-top" alt="Transmisión Automatizada">
+                <div class="card-body">
+                <h5 class="card-title">Transmisión de Doble Embrague (DCT)</h5>
+                <p class="card-text">Permite cambios rápidos con dos embragues para mayor rendimiento.</p>
+                </div>
+            </div>
+            </div>
+
+            <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+                <img src="marcas/transplanet.avif" class="card-img-top" alt="Transmisión Planetaria">
+                <div class="card-body">
+                <h5 class="card-title">Transmisión Planetaria</h5>
+                <p class="card-text">Sistema basado en engranajes planetarios que optimiza la potencia.</p>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+</div>

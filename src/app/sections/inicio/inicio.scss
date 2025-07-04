@@ -1,0 +1,228 @@
+.inicio {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.hero {
+  position: relative;
+  background: url('/inicio/img4.jpeg') center/cover no-repeat;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn, .btn-outline {
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background: #c62828;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background: #a62121;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #c62828;
+}
+
+.quienes-somos .container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.quienes-somos .text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.quienes-somos .image img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 450px;
+}
+
+.marcas {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.marcas h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.marcas .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 60px; /* espacio entre logos */
+  margin-top: 20px;
+}
+
+.marcas img {
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.marcas img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ventajas {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.ventaja-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 20px;
+}
+
+.ventaja {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.como-comprar {
+  background: #f7f7f7;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.como-comprar h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.pasos-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.paso {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.paso:hover {
+  transform: translateY(-5px);
+}
+
+.icono {
+  font-size: 2.2rem;
+  color: #c62828;
+  margin-bottom: 10px;
+}
+
+.paso h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.paso p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.tienda-online {
+  padding: 40px 20px;
+  background: #eee;
+  text-align: center;
+}
+
+.notify-form {
+  margin-top: 15px;
+}
+
+.notify-form input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.notify-form button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #c62828;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
