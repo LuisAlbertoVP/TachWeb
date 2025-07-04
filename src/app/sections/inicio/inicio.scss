@@ -5,11 +5,22 @@
 
 .hero {
   position: relative;
-  background: url('/inicio/img4.jpeg') center/cover no-repeat;
   padding: 100px 20px;
   color: #fff;
   text-align: center;
   overflow: hidden;
+  /* Quitar el background porque ahora usaremos una imagen en HTML */
+}
+
+.hero img.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none; /* para que no interfiera con clicks */
 }
 
 .hero::before {
