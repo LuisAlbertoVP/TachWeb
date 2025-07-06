@@ -12,8 +12,8 @@
     <div class="contact-card">
       <div class="circle-icon">📞</div>
       <h3>Teléfonos</h3>
-      <p>Fijo: (04) 237-0175</p>
-      <p>Cel: (593) 099-1111-1111</p>
+      <p>Fijo: {{appService.telefono}}</p>
+      <p>Cel: {{appService.celular}}</p>
     </div>
 
     <div class="contact-card">
@@ -32,16 +32,16 @@
     <div class="contact-card">
       <div class="circle-icon">🗺️</div>
       <h3>Google Maps</h3>
-      <p><a href="https://maps.app.goo.gl/BbPAjBoju1qCooD7A" target="_blank">Ver ubicación</a></p>
+      <p><a [href]="appService.linkGoogleMaps" target="_blank">Ver ubicación</a></p>
     </div>
 
     <div class="contact-card">
       <div class="circle-icon">🌐</div>
       <h3>Redes Sociales</h3>
       <p>
-        <a href="https://facebook.com" target="_blank">Facebook</a> ·
-        <a href="https://instagram.com" target="_blank">Instagram</a> ·
-        <a href="https://wa.me/593991111111" target="_blank">WhatsApp</a>
+        <a [href]="appService.linkFacebook" target="_blank">Facebook</a> ·
+        <a [href]="appService.linkInstagram" target="_blank">Instagram</a> ·
+        <a [href]="appService.linkWhatsapp('Hola, necesito más información, por favor.')" target="_blank">WhatsApp</a>
       </p>
     </div>
   </div>

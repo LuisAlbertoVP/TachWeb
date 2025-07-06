@@ -1,5 +1,4 @@
 <div class="container">
-
   <section class="history-section">
     <h2>Nuestra Historia</h2>
     <p>
@@ -39,12 +38,8 @@
     <h2>Ubicación</h2>
     <p><strong>Guayaquil Centro</strong></p>
     <p>Los Ríos entre Ayacucho y Huancavilca</p>
-    <p>📞 <strong>Tel:</strong> (04) 237-0175 &nbsp;&nbsp;|&nbsp;&nbsp; 📱 <strong>Cel:</strong> (593) 099-1111-1111</p>
+    <p>📞 <strong>Tel:</strong> {{appService.telefono}} &nbsp;&nbsp;|&nbsp;&nbsp; 📱 <strong>Cel:</strong> {{appService.celular}}</p>
     <p><a href="mailto:marketing&#64;tach.com">tach&#64;yahoo.com</a></p>
-    <p>
-        <a class="maps-link" href="https://maps.app.goo.gl/BbPAjBoju1qCooD7A" target="_blank" rel="noopener noreferrer">
-        Ver en Google Maps
-        </a>
-    </p>
+    <p><a class="maps-link" [href]="appService.linkGoogleMaps" target="_blank">Ver en Google Maps</a></p>
   </section>
 </div>

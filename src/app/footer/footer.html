@@ -11,8 +11,8 @@
       <h4>Contacto</h4>
       <ul>
         <li>📍 Guayaquil, Ecuador</li>
-        <li>📞 (04) 237-0175</li>
-        <li>📱 099-1111-1111</li>
+        <li>📞 {{appService.telefono}}</li>
+        <li>📱 {{appService.celular}}</li>
         <li>✉️ chabelitransmisiones.com</li>
       </ul>
     </div>
@@ -20,9 +20,9 @@
     <div class="footer-box">
       <h4>Síguenos</h4>
       <div class="social-icons">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">WhatsApp</a>
+        <a [href]="appService.linkFacebook" target="_blank">Facebook</a>
+        <a [href]="appService.linkInstagram" target="_blank">Instagram</a>
+        <a [href]="appService.linkWhatsapp(mensajeWhatsapp)" target="_blank">WhatsApp</a>
       </div>
     </div>
   </div>

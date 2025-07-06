@@ -1,46 +1,69 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="fa-solid fa-gears me-2"></i>Transmisiones Automáticas Chabeli
+      <a class="navbar-brand" routerLink="/">
+        Transmisiones Autom&aacute;ticas Chabeli
       </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="d-none d-lg-flex align-items-center justify-content-between flex-grow-1">
         <ul class="navbar-nav ms-auto me-4">
-          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" routerLink="/">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" routerLink="/quienes-somos">Quiénes Somos</a></li>
-
           <li class="nav-item dropdown marcas-hover">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Marcas
+              Veh&iacute;culos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/marcas/chevrolet">Chevrolet</a></li>
-              <li><a class="dropdown-item" routerLink="/marcas/jeep">Jeep</a></li>
-              <li><a class="dropdown-item" routerLink="/marcas/volkswagen">Volkswagen</a></li>
-              <!--<li><a class="dropdown-item" href="#">Renault</a></li>
-              <li><a class="dropdown-item" href="#">Suzuki</a></li>
-              <li><a class="dropdown-item" href="#">Dodge</a></li>
-              <li><a class="dropdown-item" href="#">Nissan</a></li>
-              <li><a class="dropdown-item" href="#">Peugeot</a></li>
-              <li><a class="dropdown-item" href="#">Ford</a></li>
-              <li><a class="dropdown-item" href="#">Skoda</a></li>-->
+              @for(vehiculo of vehiculos; track $index){
+                <li><a class="dropdown-item" [routerLink]="vehiculo.link">{{vehiculo.nombre}}</a></li>
+              }
             </ul>
           </li>
-
           <li class="nav-item"><a class="nav-link" routerLink="/contacto">Contacto</a></li>
         </ul>
 
         <div class="social-icons d-flex align-items-center">
-          <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/593999999999" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a [href]="appService.linkFacebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a [href]="appService.linkInstagram" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a [href]="appService.linkWhatsapp(mensajeWhatsapp)" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
+
+      <div class="offcanvas offcanvas-end bg-dark text-white d-lg-none" tabindex="-1" id="offcanvasNavbar" #offcanvasRef>
+        <div class="offcanvas-header justify-content-between align-items-center py-2 px-3">
+          <h5 class="offcanvas-title m-0 fs-5">Menú</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" routerLink="/" (click)="closeOffcanvas()">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="/quienes-somos" (click)="closeOffcanvas()">Quiénes Somos</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Veh&iacute;culos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                @for(vehiculo of vehiculos; track $index){
+                  <li><a class="dropdown-item" [routerLink]="vehiculo.link" (click)="closeOffcanvas()">{{vehiculo.nombre}}</a></li>
+                }
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" routerLink="/contacto" (click)="closeOffcanvas()">Contacto</a></li>
+          </ul>
+
+          <div class="social-icons d-flex align-items-center mt-3">
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="{{appService.linkWhatsapp(mensajeWhatsapp)}}" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      
     </div>
   </nav>
 </header>

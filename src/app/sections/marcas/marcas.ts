@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-marcas',
@@ -8,8 +9,9 @@ import { Component, Input } from '@angular/core';
 export class Marcas {
   @Input() marca!: string;
   @Input() srcMarcas: string[] = [];
+  appService = inject(AppService);
 
   get mensaje() {
-    return encodeURIComponent(`Hola estoy interesado en repuestos ${this.marca} para transmisión`);
+    return `Hola estoy interesado en repuestos ${this.marca} para transmisión`;
   }
 }
