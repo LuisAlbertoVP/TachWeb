@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Marcas } from '../marcas';
+import { Vehiculos } from '../vehiculos';
 
 @Component({
   selector: 'app-jeep',
-  template: '<app-marcas [marca]="marca" [srcMarcas]="srcMarcas" />',
-  imports: [Marcas]
+  template: '<app-vehiculos [marca]="marca" [srcMarcas]="srcMarcas" />',
+  imports: [Vehiculos]
 })
 export class Jeep {
   marca: string = 'Jeep';

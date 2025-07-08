@@ -1,5 +1,5 @@
 <div class="container">
-    <section class="intro-section text-center my-4">
+    <section class="intro-section text-center">
         <h1 class="intro-title">Repuestos para Transmisiones {{marca}}</h1>
         <p class="intro-description">
             Encuentra repuestos originales y compatibles para las transmisiones automáticas de tu vehículo {{marca}}. Calidad garantizada, atención inmediata.
@@ -17,7 +17,7 @@
                 <div class="carousel-inner">
                     @for (srcMarca of srcMarcas; track $index) {
                         <div class="carousel-item" [class.active]="$index == 0">
-                            <img [src]="srcMarca" class="d-block w-100" alt="Vehículo #{{$index}}">
+                            <img [src]="srcMarca" class="w-100" alt="Vehículo #{{$index}}">
                         </div>
                     }
                 </div>
@@ -33,14 +33,10 @@
         </div>
         <div class="col-md-4">
             <section class="whatsapp-section">
-                <div class="container text-center">
-                    <h2 class="section-title">¿Necesitas ayuda con repuestos {{marca}}?</h2>
-                    <a href="{{appService.linkWhatsapp(mensaje)}}" 
-                        target="_blank" 
-                        class="whatsapp-btn">
+                <h2 class="section-title">¿Necesitas ayuda con repuestos {{marca}}?</h2>
+                <a href="{{appService.linkWhatsapp(mensaje)}}" target="_blank" class="whatsapp-btn">
                     <i class="fab fa-whatsapp"></i> Chatea con nosotros en WhatsApp
-                    </a>
-                </div>
+                </a>
             </section>
         </div>
     </div>
@@ -81,7 +77,6 @@
                 </div>
             </div>
             </div>
-
         </div>
     </section>
 </div>

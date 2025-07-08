@@ -14,15 +14,19 @@ export const routes: Routes = [
         loadComponent: () => import('./sections/contacto/contacto').then(c => c.Contacto)
     },
     {
-        path: 'marcas/chevrolet',
-        loadComponent: () => import('./sections/marcas/chevrolet/chevrolet').then(c => c.Chevrolet)
+        path: 'vehiculos/chevrolet',
+        loadComponent: () => import('./sections/vehiculos/chevrolet/chevrolet').then(c => c.Chevrolet)
     },
     {
-        path: 'marcas/jeep',
-        loadComponent: () => import('./sections/marcas/jeep/jeep').then(c => c.Jeep)
+        path: 'vehiculos/jeep',
+        loadComponent: () => import('./sections/vehiculos/jeep/jeep').then(c => c.Jeep)
     },
     {
-        path: 'marcas/volkswagen',
-        loadComponent: () => import('./sections/marcas/volkswagen/volkswagen').then(c => c.Volkswagen)
+        path: 'vehiculos/volkswagen',
+        loadComponent: () => import('./sections/vehiculos/volkswagen/volkswagen').then(c => c.Volkswagen)
+    },
+    {
+        path: 'catalogo',
+        loadComponent: () => import('./sections/catalogo/catalogo').then(c => c.Catalogo)
     }
 ];

@@ -9,18 +9,15 @@
   border-radius: 50%;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  z-index: 100;
+  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s;
-}
+  text-decoration: none;
+  font-size: 30px;
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
+  &:hover {
+    transform: scale(1.1);
+  }
 }

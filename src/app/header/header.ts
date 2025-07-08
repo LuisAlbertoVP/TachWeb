@@ -13,9 +13,9 @@ declare const bootstrap: any;
 export class Header {
   @ViewChild('offcanvasRef', { static: false }) offcanvasRef!: ElementRef;
   vehiculos: MenuItem[] = [
-    {link: '/marcas/chevrolet', nombre: 'Chevrolet'},
-    {link: '/marcas/jeep', nombre: 'Jeep'},
-    {link: '/marcas/volkswagen', nombre: 'Volkswagen'}
+    {link: '/vehiculos/chevrolet', nombre: 'Chevrolet'},
+    {link: '/vehiculos/jeep', nombre: 'Jeep'},
+    {link: '/vehiculos/volkswagen', nombre: 'Volkswagen'}
   ];
   appService = inject(AppService);
   mensajeWhatsapp = 'Hola, vi su página web y quisiera saber más sobre sus productos.';

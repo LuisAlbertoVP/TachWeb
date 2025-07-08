@@ -1,35 +1,31 @@
-/* Intro Section */
 .intro-section {
   padding: 1.5rem 1rem;
-}
 
-.intro-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1e1e1e;
-  margin-bottom: 0.5rem;
-}
+  .intro-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 0.5rem;
+  }
 
-.intro-description {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 700px;
-  margin: 0 auto;
+  .intro-description {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
 
 .carousel-item {
-  height: 400px;
+  height: 300px;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
 }
 
-/* Imagen del carousel */
-.carousel-item img {
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-/* WhatsApp sección igual altura */
 .whatsapp-section {
   background-color: #f8f9fa;
   height: 100%;
@@ -37,35 +33,33 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+  text-align: center;
 
-/* Título */
-.section-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-}
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
 
-/* Botón de WhatsApp */
-.whatsapp-btn {
-  font-size: 1.1rem;
-  background-color: #25d366;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  transition: background-color 0.3s;
-  text-decoration: none;
-}
+  .whatsapp-btn {
+    font-size: 1rem;
+    background-color: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 35px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: background-color 0.3s;
+    text-decoration: none;
 
-.whatsapp-btn:hover {
-  background-color: #1ebe5d;
+    &:hover {
+      background-color: #1ebe5d;
+    }
+  }
 }
 
 .productos-destacados {
-  /* Título y sección */
   .section-header {
     max-width: 700px;
     margin: 0 auto 3.5rem auto;
@@ -108,7 +102,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
-  /* Cards */
   .card {
     border: none;
     border-radius: 20px;
@@ -189,7 +182,6 @@
   }
 }
 
-/* Animación para la barra decorativa del título */
 @keyframes pulseBar {
   0%, 100% {
     box-shadow: 0 0 15px #f4c430;

@@ -2,11 +2,11 @@ import { Component, inject, Input } from '@angular/core';
 import { AppService } from '../../app.service';
 
 @Component({
-  selector: 'app-marcas',
-  templateUrl: './marcas.html',
-  styleUrl: './marcas.scss'
+  selector: 'app-vehiculos',
+  templateUrl: './vehiculos.html',
+  styleUrl: './vehiculos.scss'
 })
-export class Marcas {
+export class Vehiculos {
   @Input() marca!: string;
   @Input() srcMarcas: string[] = [];
   appService = inject(AppService);
