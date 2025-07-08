@@ -90,24 +90,26 @@
   color: #c62828;
 }
 
-.quienes-somos .container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
+.quienes-somos {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
 
-.quienes-somos .text {
-  flex: 1;
-  max-width: 500px;
-}
+  .text {
+    flex: 1;
+    max-width: 500px;
+  }
 
-.quienes-somos .image img {
-  max-width: 100%;
-  border-radius: 10px;
-  height: 450px;
+  .image img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: 350px;
+  }
 }
 
 .marcas {
@@ -143,97 +145,134 @@
 }
 
 .ventajas {
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: #fff;
   text-align: center;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .ventaja-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 20px;
+
+    .ventaja {
+      background: #fafafa;
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+      }
+
+      h3 {
+        margin-bottom: 12px;
+        color: #1e1e1e;
+        position: relative;
+        text-align: left;
+      }
+
+      p {
+        line-height: 1.5;
+        color: #555;
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
 }
 
-.ventaja-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 20px;
-}
-
-.ventaja {
-  background: #f1f1f1;
-  padding: 20px;
-  border-radius: 10px;
-}
 
 .como-comprar {
   background: #f7f7f7;
   padding: 50px 20px;
   text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+  }
+
+  .pasos-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .paso {
+      background: #fff;
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .icono {
+        font-size: 2.2rem;
+        color: #c62828;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      p {
+        font-size: 0.95rem;
+        color: #666;
+      }
+    }
+  }
 }
 
-.como-comprar h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #222;
-}
-
-.pasos-grid {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.paso {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.paso:hover {
-  transform: translateY(-5px);
-}
-
-.icono {
-  font-size: 2.2rem;
-  color: #c62828;
-  margin-bottom: 10px;
-}
-
-.paso h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
+.info-catalogo {
+  background-color: #f7f7f7;
   color: #333;
-}
-
-.paso p {
-  font-size: 0.95rem;
-  color: #666;
-}
-
-.tienda-online {
-  padding: 40px 20px;
-  background: #eee;
   text-align: center;
-}
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  max-width: 700px;
 
-.notify-form {
-  margin-top: 15px;
-}
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
 
-.notify-form input {
-  padding: 10px;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-right: 10px;
-}
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    color: #555;
+  }
 
-.notify-form button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  background: #c62828;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  .btn-contacto {
+    display: inline-block;
+    background-color: #f4c430;
+    color: #1e1e1e;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e0b100;
+    }
+  }
 }

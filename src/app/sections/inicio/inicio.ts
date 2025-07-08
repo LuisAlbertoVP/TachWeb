@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { AppService } from '../../app.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,4 +8,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './inicio.scss',
   imports: [RouterLink]
 })
-export class Inicio {}
+export class Inicio {
+  appService = inject(AppService);
+}

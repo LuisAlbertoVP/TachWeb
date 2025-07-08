@@ -1,5 +1,4 @@
 <main class="inicio">
-  <!-- Hero principal -->
   <section class="hero">
     <img src="inicio/img4.jpeg" alt="Transmisiones Automáticas" class="background-img" />
     <div class="hero-content">
@@ -12,7 +11,6 @@
     </div>
   </section>
 
-  <!-- Sección quiénes somos -->
   <section class="quienes-somos">
     <div class="container">
       <div class="text">
@@ -25,7 +23,6 @@
     </div>
   </section>
 
-  <!-- Marcas -->
   <section class="marcas">
     <h2>Marcas que trabajamos</h2>
     <div class="logos">
@@ -36,7 +33,6 @@
     </div>
   </section>
 
-  <!-- Ventajas -->
   <section class="ventajas">
     <h2>¿Por qué elegirnos?</h2>
     <div class="ventaja-grid">
@@ -85,13 +81,9 @@
     </div>
 </section>
 
-  <!-- Anuncio tienda online -->
-  <section class="tienda-online">
-    <h2>¡Muy pronto nuestra tienda en línea!</h2>
-    <p>Compra tus repuestos desde casa, de forma rápida y segura.</p>
-    <form class="notify-form">
-      <input type="email" placeholder="Tu correo electrónico" required>
-      <button type="submit">Quiero que me avisen</button>
-    </form>
+  <section class="info-catalogo">
+    <h2>¿Buscas un repuesto específico?</h2>
+    <p>Contáctanos y te ayudaremos personalmente a encontrarlo.</p>
+    <a [href]="appService.linkWhatsapp('Hola, busco un repuesto. ¿Me pueden ayudar?')" target="_blank" class="btn-contacto">Escríbenos por WhatsApp</a>
   </section>
 </main>

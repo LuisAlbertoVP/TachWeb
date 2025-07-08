@@ -49,16 +49,16 @@ footer {
   display: flex;
   gap: 15px;
   margin-top: 10px;
-}
 
-.social-icons a {
-  color: #fca311;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
+  a  {
+    color: #ff6b6b;
+    text-decoration: none;
+    font-size: 1.2rem;
 
-.social-icons a:hover {
-  color: #e85d04;
+    &:hover {
+      color: #e63946;
+    }
+  }
 }
 
 @media (max-width: 768px) {
