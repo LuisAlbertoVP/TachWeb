@@ -42,8 +42,9 @@
     <h2>Ubicación</h2>
     <p><strong>Guayaquil Centro</strong></p>
     <p>Los Ríos entre Ayacucho y Huancavilca</p>
-    <p>📞 <strong>Tel:</strong> {{appService.telefono}} &nbsp;&nbsp;|&nbsp;&nbsp; 📱 <strong>Cel:</strong> {{appService.celular}}</p>
-    <p><a href="mailto:marketing&#64;tach.com">tach&#64;yahoo.com</a></p>
+    <p>📞 <strong>Tel&eacute;fono:</strong> {{appService.telefono}}</p>
+    <p>📱 <strong>Celular:</strong> {{appService.celular}}</p>
+    <p>✉️ <a href="mailto:{{appService.correo}}">{{appService.correo}}</a></p>
     <p><a class="maps-link" [href]="appService.linkGoogleMaps" target="_blank">Ver en Google Maps</a></p>
   </section>
 </div>
