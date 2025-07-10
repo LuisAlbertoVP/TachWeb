@@ -13,7 +13,7 @@
 
   <section class="quienes-somos">
     <div class="container">
-      <div class="text">
+      <div class="text" appAppearOnScroll>
         <h2>Pasión por las transmisiones, compromiso con tu vehículo</h2>
         <p>Desde Guayaquil, en Chabeli llevamos años ofreciendo repuestos garantizados para transmisiones automáticas. Nuestro trabajo y experiencia nos han convertido en referentes del sector.</p>
       </div>
@@ -59,19 +59,19 @@
   <section class="ventajas">
     <h2>¿Por qué elegirnos?</h2>
     <div class="ventaja-grid">
-      <div class="ventaja">
+      <div class="ventaja" [appScrollAnimate]="1">
         <h3>Atención personalizada</h3>
         <p>Brindamos asesoría directa según tu vehículo.</p>
       </div>
-      <div class="ventaja">
+      <div class="ventaja" [appScrollAnimate]="2">
         <h3>Repuestos garantizados</h3>
         <p>Solo trabajamos con productos originales y de confianza.</p>
       </div>
-      <div class="ventaja">
+      <div class="ventaja" [appScrollAnimate]="3">
         <h3>Soporte técnico</h3>
         <p>Te ayudamos a identificar el repuesto exacto que necesitas.</p>
       </div>
-      <div class="ventaja">
+      <div class="ventaja" [appScrollAnimate]="4">
         <h3>Envíos seguros</h3>
         <p>Recibe tus productos con total confianza en todo el país.</p>
       </div>
@@ -81,22 +81,22 @@
   <section class="como-comprar">
     <h2>¿Cómo comprar con nosotros?</h2>
     <div class="pasos-grid">
-      <div class="paso">
+      <div class="paso" [appScrollAnimate]="1">
         <div class="icono">📞</div>
         <h3>Contáctanos</h3>
         <p>Escríbenos por WhatsApp o visítanos en Guayaquil para comenzar.</p>
       </div>
-      <div class="paso">
+      <div class="paso" [appScrollAnimate]="2">
         <div class="icono">🛠️</div>
         <h3>Te asesoramos</h3>
         <p>Te ayudamos a encontrar el repuesto exacto según tu vehículo.</p>
       </div>
-      <div class="paso">
+      <div class="paso" [appScrollAnimate]="3">
         <div class="icono">💳</div>
         <h3>Realiza tu pago</h3>
         <p>Pagas de forma segura por transferencia, depósito o efectivo.</p>
       </div>
-      <div class="paso">
+      <div class="paso" [appScrollAnimate]="4">
         <div class="icono">🚚</div>
         <h3>Recibe tu pedido</h3>
         <p>Envío rápido a nivel nacional o retiro en nuestro local.</p>
@@ -104,7 +104,7 @@
     </div>
 </section>
 
-  <section class="info-catalogo">
+  <section class="info-catalogo" appAppearOnScroll>
     <h2>¿Buscas un repuesto específico?</h2>
     <p>Contáctanos y te ayudaremos personalmente a encontrarlo.</p>
     <a [href]="appService.linkWhatsapp('Hola, busco un repuesto. ¿Me pueden ayudar?')" target="_blank" class="btn-contacto">Escríbenos por WhatsApp</a>
