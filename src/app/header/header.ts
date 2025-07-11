@@ -1,14 +1,13 @@
 import { Component, ElementRef, inject, ViewChild } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { MenuItem } from '../../models/MenuItem';
 import { AppService } from '../app.service';
+import { NavigationTransitionService } from '../../shared/services/navigation-transition';
 declare const bootstrap: any;
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
-  styleUrl: './header.scss',
-  imports: [RouterLink]
+  styleUrl: './header.scss'
 })
 export class Header {
   @ViewChild('offcanvasRef', { static: false }) offcanvasRef!: ElementRef;
@@ -18,7 +17,7 @@ export class Header {
     {link: '/vehiculos/volkswagen', nombre: 'Volkswagen'}
   ];
   appService = inject(AppService);
-  mensajeWhatsapp = 'Hola, vi su página web y quisiera saber más sobre sus productos.';
+  navService = inject(NavigationTransitionService);
 
   closeOffcanvas() {
     const bsOffcanvas = bootstrap.Offcanvas.getInstance(this.offcanvasRef.nativeElement);

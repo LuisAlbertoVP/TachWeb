@@ -1,5 +1,4 @@
 import { Directive, ElementRef, Renderer2, OnInit, OnDestroy } from '@angular/core';
-import { ScrollService } from '../services/scroll.service';
 
 @Directive({
   selector: '[appAppearOnScroll]'
@@ -10,7 +9,6 @@ export class AppearOnScrollDirective implements OnInit, OnDestroy {
   constructor(
     private el: ElementRef, 
     private renderer: Renderer2,
-    private scrollService: ScrollService
   ) {}
 
   ngOnInit() {
@@ -22,10 +20,6 @@ export class AppearOnScrollDirective implements OnInit, OnDestroy {
 
     this.observer = new IntersectionObserver(
       ([entry]) => {
-        if (this.scrollService.isScrollingManually) {
-          return;
-        }
-
         if (entry.isIntersecting) {
           this.renderer.setStyle(nativeEl, 'opacity', '1');
           this.observer.unobserve(nativeEl);

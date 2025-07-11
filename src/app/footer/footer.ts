@@ -8,6 +8,5 @@ import { AppService } from '../app.service';
 })
 export class Footer {
     appService = inject(AppService);
-    mensajeWhatsapp = 'Hola, vi su página web y quisiera saber más sobre sus productos.';
     year: number = new Date().getFullYear();
 }

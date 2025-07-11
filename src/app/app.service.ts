@@ -9,7 +9,10 @@ export class AppService {
     linkFacebook = 'https://www.facebook.com/transautochabeli?mibextid=ZbWKwL';
     linkInstagram = 'https://www.instagram.com/transautochabeli25?igsh=MXhheDRzZjRvaHNiYQ==';
 
-    linkWhatsapp(mensaje: string): string {
+    linkWhatsapp(mensaje: string = ''): string {
+        if (!mensaje) {
+            mensaje = 'Hola, vi su página web y quisiera saber más sobre sus productos.';
+        }
         return `https://wa.me/16467502306?text=${encodeURIComponent(mensaje)}`;
     }
 }
